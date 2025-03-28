@@ -27,12 +27,12 @@ const getJobs = async languages => {
                 `;
                 jobsUl.append(jobLi);
             }
+
+            languageLi.append(jobsUl);
+            languageUl.append(languageLi);
         } else {
             console.log(`no Jobs was found for ${language}`)
         }
-
-        languageLi.append(jobsUl);
-        languageUl.append(languageLi);
     }
 };
 

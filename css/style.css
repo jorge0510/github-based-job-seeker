@@ -8,18 +8,93 @@
 }
 
 /******************************************
-/* LAYOUT
+/* TAGS
 /*******************************************/
+nav {
+  background: black;
+  color: white;
+  margin: 0;
+  font-family: 'Public Sans';
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 10px;
+}
+h1, h2 {
+  margin: 0;
+}
+h1 {
+  font-family: fantasy, Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+}
+input {
+  width: 400px;
+  height: 32px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border: none;
+  padding-left: 10px;
+}
+button {
+  width: 100px;
+  height: 33px;
+  background: #0007FF;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  margin-left: -20px;
+  cursor: pointer;
+}
 
+a {
+  color: black;
+  text-decoration: none;
+}
 
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin:5px;
+}
+
+div > ul > li > ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  width: 600px;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 10px;
+}
+
+div > ul > li {
+  border: none;
+  padding: 0;
+  width: 25%;
+}
+
+div > p {
+  margin: 0;
+}
 
 /******************************************
-/* ADDITIONAL STYLES
+/* CLASSES
 /*******************************************/
-.jobDescription {
 
+.intro {
+  background: black;
+  color: white;
+  padding-left: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.jobDescription {
+  text-decoration: none;
 }
 
 .languageTitle {
-  
+
 }
