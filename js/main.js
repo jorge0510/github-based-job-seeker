@@ -19,9 +19,10 @@ const getJobs = async languages => {
             
             for (const job of jobsData.jobs) {
                 const jobLi = document.createElement('li');
+                const priceText = job.annualSalaryMin === undefined || job.annualSalaryMax === undefined ? '' : `(${job.annualSalaryMin && job.annualSalaryMin.toLocaleString('en-US', { style: 'currency', currency: job.salaryCurrency })} - ${job.annualSalaryMax && job.annualSalaryMax.toLocaleString('en-US', { style: 'currency', currency: job.salaryCurrency })})`
                 jobLi.innerHTML = `
                     <a href="${job.url}" target="_blank">
-                        <h3> ${job.jobTitle} | ${job.jobType && job.jobType.join(', ')} | Level: ${job.jobLevel} | Company: ${job.companyName} | Location: ${job.jobGeo} | (${job.annualSalaryMin && job.annualSalaryMin.toLocaleString('en-US', { style: 'currency', currency: job.salaryCurrency })} - ${job.annualSalaryMax && job.annualSalaryMax.toLocaleString('en-US', { style: 'currency', currency: job.salaryCurrency })})</h3>
+                        <h3> ${job.jobTitle} | ${job.jobType && job.jobType.join(', ')} | Level: ${job.jobLevel} | Company: ${job.companyName} | Location: ${job.jobGeo} | ${priceText} </h3>
                         <div class="jobDescription">${job.jobExcerpt}</div>
                     </a>
                 `;
